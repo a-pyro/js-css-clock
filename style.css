@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body,
 html {
     background: radial-gradient(100% 225% at 0% 0%, #de3e3e 0%, #17115c 100%),
         radial-gradient(100% 225% at 100% 0%, #ff9040 0%, #ff0000 100%),
@@ -8,11 +7,44 @@ html {
         radial-gradient(100% 120% at 75% 0%, #a74600 0%, #000000 100%),
         linear-gradient(310deg, #0063d8 0%, #16009a 50%);
     background-blend-mode: overlay, color-dodge, color-burn, color-dodge, normal;
-    color: #f3f3f3;
+    text-align: center;
+    background-size: cover;
     font-family: 'Roboto', sans-serif;
+
+    font-size: 10px;
+}
+body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .clock {
-    width: 100vw;
-    height: 100vh;
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid white;
+    border-radius: 50%;
+    position: relative;
+    -webkit-box-shadow: inset 3px 2px 28px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 3px 2px 28px -8px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 3px 2px 28px -8px rgba(0, 0, 0, 0.75);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+}
+
+.hand {
+    height: 6px;
+    width: 50%;
+    background: white;
+    position: absolute;
+    top: 50%;
 }
