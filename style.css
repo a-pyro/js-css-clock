@@ -43,8 +43,23 @@ body {
 
 .hand {
     height: 6px;
-    width: 50%;
+    width: 45%;
     background: white;
     position: absolute;
     top: 50%;
+    right: 50%;
+    /* move the pivot point on the right */
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: ease-in-out;
+}
+
+.center {
+    position: absolute;
+    top: 47%;
+    left: 47%;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
 }
